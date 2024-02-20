@@ -181,12 +181,12 @@ iframe {
 }
 
 .info .card-body {
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 .info .card-footer {
   border-top: 1px solid #999;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
