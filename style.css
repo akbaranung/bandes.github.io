@@ -217,6 +217,34 @@ iframe {
   font-weight: 300;
 }
 
+.rsvp {
+  background-color: var(--bg);
+}
+
+.rsvp h2 {
+  font-size: 4.5rem;
+}
+
+.rsvp p {
+  color: white;
+}
+
+.rsvp form label {
+  color: white;
+}
+
+.rsvp button {
+  background-color: var(--red);
+  color: white;
+  border: 1px solid var(--red);
+}
+
+.rsvp button:hover {
+  background-color: white;
+  color: var(--red);
+  border: 1px solid white;
+}
+
 footer {
   padding: 3rem;
   background-color: var(--red);
