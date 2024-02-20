@@ -1,277 +1,455 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bandes Funight Carnival Bash</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bandes Funight Carnival Bash</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:wght@100;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:wght@100;300;400;600;700&display=swap"
-    rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- simplyCountdown -->
-  <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css" />
-  <script src="countdown/simplyCountdown.min.js"></script>
+    <!-- simplyCountdown -->
+    <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css" />
+    <script src="countdown/simplyCountdown.min.js"></script>
 
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
 
-  <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
+    <section
+      id="hero"
+      class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white"
+    >
+      <main>
+        <h4>Dear <span>Akbar Anung, </span></h4>
+        <h1>Bandes Funight Carnival Bash</h1>
+        <p>Akan diselenggarakan dalam:</p>
+        <div class="simply-countdown"></div>
+        <a href="#home" class="btn btn-lg mt-4" onClick="enableScroll()"
+          >Lihat Undangan</a
+        >
+      </main>
+    </section>
 
-  <section id="hero"
-    class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
-    <main>
-      <h4>Dear <span>Akbar Anung, </span></h4>
-      <h1>Bandes Funight Carnival Bash</h1>
-      <p>Akan diselenggarakan dalam:</p>
-      <div class="simply-countdown"></div>
-      <a href="#home" class="btn btn-lg mt-4" onClick="enableScroll()">Lihat Undangan</a>
-    </main>
-
-  </section>
-
-  <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
-    <div class="container">
-      <a class="navbar-brand" href="#">Bandes</a>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Bandes</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <div class="navbar-nav ms-auto">
-            <a class="nav-link" href="#home">Home</a>
-            <a class="nav-link" href="#info">Info</a>
-            <a class="nav-link" href="#video">Journey to Event</a>
+    <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">Bandes</a>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Bandes</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link" href="#info">Info</a>
+              <a class="nav-link" href="#video">Journey to Event</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <section id="home" class="home">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8 text-center">
-          <h2>Bandes Funight Carnival Bash</h2>
-          <h3>Diselenggarakan pada 07 Maret 2024 di Tangerang Selatan, Banten</h3>
-          <p>Oleh karena itu, dengan segala hormat, kami bermaksud untuk mengundang Bapak/Ibu, Saudara/i, untuk hadir
-            pada acara tersebut. </p>
-        </div>
-        <iframe src="https://drive.google.com/file/d/1vubkKI64zzsGukMH9jh20LykBpMBy5Hk/preview" height="500"></iframe>
-      </div>
-    </div>
-  </section>
-
-
-  <section id="info" class="info">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8 col-10 text-center">
-          <h2>Informasi Acara</h2>
-          <p class="alamat">Alamat: The Pavilion Wedding Venue, Jl. Menjangan Raya No.8, Pd. Ranji, Kec. Ciputat Tim., Kota Tangerang Selatan, Banten 15412</p>
-
+    <section id="home" class="home">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2>Bandes Funight Carnival Bash</h2>
+            <h3>
+              Diselenggarakan pada 07 Maret 2024 di Tangerang Selatan, Banten
+            </h3>
+            <p>
+              Oleh karena itu, dengan segala hormat, kami bermaksud untuk
+              mengundang Bapak/Ibu, Saudara/i, untuk hadir pada acara tersebut.
+            </p>
+          </div>
           <iframe
-            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=The%20Pavilion%20Wedding%20Venue,%20Jl.%20Menjangan%20Raya%20No.8,%20Pd.%20Ranji,%20Kec.%20Ciputat%20Tim.,%20Kota%20Tangerang%20Selatan,%20Banten%2015412+(Bandes)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-          <a href="https://maps.app.goo.gl/TqWv3i96ZA3QNoo1A" target="_blank" class="btn btn-light btn-sm my-3">Klik untuk
-            membuka peta</a>
-          <p class="description">Diharapkan untuk tidak salah alamat dan tanggal. Manakala tiba di tujuan namun tidak
-            ada tanda-tanda sedang dilangsungkan acara, boleh jadi Anda salah jadwal, atau salah tempat.</p>
+            src="https://drive.google.com/file/d/1vubkKI64zzsGukMH9jh20LykBpMBy5Hk/preview"
+            height="500"
+          ></iframe>
         </div>
       </div>
+    </section>
 
-      <div class="row justify-content-center mt-4">
-        <div class="col-md-5 col-10">
-          <div class="card text-center text-bg-light mb-5">
-            <div class="card-header">Acara</div>
-            <div class="card-body">
-              <div class="row justify-content-center">
-                <div class="col-md-6">
-                  <i class="bi bi-clock d-block"></i>
-                  <span>17.00 - 22.00</span>
-                </div>
-                <div class="col-md-6">
-                  <i class="bi bi-calendar3 d-block"></i>
-                  <span>Kamis, 07 Maret 2024</span>
+    <section id="info" class="info">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <h2>Informasi Acara</h2>
+            <p class="alamat">
+              Alamat: The Pavilion Wedding Venue, Jl. Menjangan Raya No.8, Pd.
+              Ranji, Kec. Ciputat Tim., Kota Tangerang Selatan, Banten 15412
+            </p>
+
+            <iframe
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=The%20Pavilion%20Wedding%20Venue,%20Jl.%20Menjangan%20Raya%20No.8,%20Pd.%20Ranji,%20Kec.%20Ciputat%20Tim.,%20Kota%20Tangerang%20Selatan,%20Banten%2015412+(Bandes)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              width="100%"
+              height="250"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+
+            <a
+              href="https://maps.app.goo.gl/TqWv3i96ZA3QNoo1A"
+              target="_blank"
+              class="btn btn-light btn-sm my-3"
+              >Klik untuk membuka peta</a
+            >
+            <p class="description">
+              Diharapkan untuk tidak salah alamat dan tanggal. Manakala tiba di
+              tujuan namun tidak ada tanda-tanda sedang dilangsungkan
+              acara, boleh jadi Anda salah jadwal, atau salah tempat.
+            </p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-4">
+          <div class="col-md-5 col-10">
+            <div class="card text-center text-bg-light mb-5">
+              <div class="card-header">Acara</div>
+              <div class="card-body">
+                <div class="row justify-content-center">
+                  <div class="col-md-6">
+                    <i class="bi bi-clock d-block"></i>
+                    <span>17.00 - 22.00</span>
+                  </div>
+                  <div class="col-md-6">
+                    <i class="bi bi-calendar3 d-block"></i>
+                    <span>Kamis, 07 Maret 2024</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card-footer">
-              Saat acara dimulai diharapkan untuk kondusif menjaga kekhidmatan dan kekhusyuan seluruh prosesi.
+              <div class="card-footer">
+                Saat acara dimulai diharapkan untuk kondusif menjaga kekhidmatan
+                dan kekhusyuan seluruh prosesi.
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="video" class="gallery">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8 col-10 text-center">
-          <h2 style="font-size: 3rem;">Journey to Bandes Funight Carnival </h2>
+    </section>
+    <section id="video" class="gallery">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <h2 style="font-size: 3rem">Journey to Bandes Funight Carnival</h2>
+          </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col mt-3">
-          <div class="row justify-content-center p-0">
-            <div class="col-md-4 mb-3 justify-content-center">
-              <label for="" class="form-label">Graha - BXC</label>
-              <div class="row justify-content-center" style="padding: 0 !important; margin: 0 !important;">
-                <iframe src="https://drive.google.com/file/d/14bzoZMFaaGQiod0bxNZgYRsrvurWSzze/preview" allowfullscreen></iframe>
+        <div class="row">
+          <div class="col mt-3">
+            <div class="row justify-content-center p-0">
+              <div class="col-md-4 mb-3 justify-content-center">
+                <label for="" class="form-label">Graha - BXC</label>
+                <div
+                  class="row justify-content-center"
+                  style="padding: 0 !important; margin: 0 !important"
+                >
+                  <iframe
+                    src="https://drive.google.com/file/d/1fpLa-hmknqpGO_qfK5lLskECUtwVXPTw/preview"
+                    allowfullscreen
+                  ></iframe>
+                </div>
               </div>
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="" class="form-label">Pondok Aren - BXC</label>
-              <div class=" row justify-content-center" style="padding: 0 !important; margin: 0 !important;">
-                <iframe src="https://drive.google.com/file/d/1DFSBOvVUuVEWZr-l_q5AqE_Vphw9tBLG/preview" allowfullscreen></iframe>
+              <div class="col-md-4 mb-3">
+                <label for="" class="form-label">Pondok Aren - BXC</label>
+                <div
+                  class="row justify-content-center"
+                  style="padding: 0 !important; margin: 0 !important"
+                >
+                  <iframe
+                    src="https://drive.google.com/file/d/1y-Z4k3efGlwQFEmB58zHzeeTKVGnxW_z/preview"
+                    allowfullscreen
+                  ></iframe>
+                </div>
               </div>
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="" class="form-label">Sektor 1 - BXC</label>
-              <div class=" row justify-content-center" style="padding: 0 !important; margin: 0 !important;">
-                <iframe src="https://drive.google.com/file/d/1-SyivZjn6bEUurj8pFGbETnjCqFfRLqi/preview" allowfullscreen></iframe>
+              <div class="col-md-4 mb-3">
+                <label for="" class="form-label">Sektor 1 - BXC</label>
+                <div
+                  class="row justify-content-center"
+                  style="padding: 0 !important; margin: 0 !important"
+                >
+                  <iframe
+                    src="https://drive.google.com/file/d/1-SyivZjn6bEUurj8pFGbETnjCqFfRLqi/preview"
+                    allowfullscreen
+                  ></iframe>
+                </div>
               </div>
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="" class="form-label">Vivo - BXC</label>
-              <div class=" row justify-content-center" style="padding: 0 !important; margin: 0 !important;">
-                <iframe src="https://drive.google.com/file/d/1lLLE7u7OTCkJet2DUwPRvs_399yuONdB/preview" allowfullscreen></iframe>
+              <div class="col-md-4 mb-3">
+                <label for="" class="form-label">Vivo - BXC</label>
+                <div
+                  class="row justify-content-center"
+                  style="padding: 0 !important; margin: 0 !important"
+                >
+                  <iframe
+                    src="https://drive.google.com/file/d/1lLLE7u7OTCkJet2DUwPRvs_399yuONdB/preview"
+                    allowfullscreen
+                  ></iframe>
+                </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-   <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col text-center">
-          <small class="block">&copy; 2024 Bandes Funight Carnival Bash. All Rights Reserved.</small>
+    <section id="rsvp" class="rsvp">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <h2>Konfirmasi Kehadiran</h2>
+            <p>Isi form di bawah ini untuk melakukan konfirmasi kehadiran.</p>
+          </div>
+        </div>
+
+        <form
+          class="row row-cols-md-auto g-3 align-items-center justify-content-center"
+          method="POST"
+          action="https://script.google.com/macros/s/AKfycbxQ7523szNWf9f_MOafobJfHV0G5bJ3eoUwN098aWfPzNcNPziOBpJeUZDC-4cetsSznQ/exec"
+          id="form-kehadiran"
+          onsubmit="submitForm()"
+        >
+          <div class="col-12">
+            <div class="mb-3">
+              <label for="nama" class="form-label">Nama</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nama"
+                name="nama"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="mb-3">
+              <label for="perusahaan" class="form-label">Perusahaan</label>
+              <input
+                type="text"
+                class="form-control"
+                id="perusahaan"
+                name="perusahaan"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="mb-3">
+              <label for="bagian" class="form-label">Bagian</label>
+              <input
+                type="text"
+                class="form-control"
+                id="bagian"
+                name="bagian"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="mb-3">
+              <label for="status" class="form-label">Konfirmasi</label>
+              <select name="status" id="status" class="form-select" required>
+                <option value="" selected>Pilih salah satu</option>
+                <option value="Hadir">Hadir</option>
+                <option value="Tidak Hadir">Tidak Hadir</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-12" style="margin-top: 35px">
+            <button type="submit" class="btn btn-primary">Kirim</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <small class="block"
+              >&copy; 2024 Bandes Funight Carnival Bash. All Rights
+              Reserved.</small
+            >
+          </div>
         </div>
       </div>
+    </footer>
+
+    <div id="audio-container">
+      <audio id="song" autoplay loop>
+        <source src="audio/bandes.mp3" type="audio/mp3" />
+      </audio>
+
+      <div class="audio-icon-wrapper" style="display: none">
+        <i class="bi bi-disc"></i>
+      </div>
     </div>
-  </footer>
 
-  <div id="audio-container">
-    <audio id="song" autoplay loop>
-      <source src="audio/bandes.mp3" type="audio/mp3">
-    </audio>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
 
-    <div class="audio-icon-wrapper" style="display: none;">
-      <i class="bi bi-disc"></i>
-    </div>
-  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
+    <script>
+      const scriptUrl =
+        "https://script.google.com/macros/s/AKfycbxQ7523szNWf9f_MOafobJfHV0G5bJ3eoUwN098aWfPzNcNPziOBpJeUZDC-4cetsSznQ/exec";
+      const form = document.forms["form-kehadiran"];
 
-  <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptUrl, {
+          method: "POST",
+          body: new FormData(form),
+        })
+          .then((response) =>
+            Swal.fire({
+              icon: "success",
+              title: "Thank you!",
+              showConfirmButton: false,
+              timer: 1500,
+            })
+          )
+          .then(() => {
+            window.location.reload();
+          })
+          .catch((error) => alert("Error!", error.message));
+      });
 
-  <script>
-    simplyCountdown('.simply-countdown', {
-      year: 2024, // required
-      month: 3, // required
-      day: 7, // required
-      hours: 17, // Default is 0 [0-23] integer
-      words: { //words displayed into the countdown
-        days: { singular: 'hari', plural: 'hari' },
-        hours: { singular: 'jam', plural: 'jam' },
-        minutes: { singular: 'menit', plural: 'menit' },
-        // seconds: { singular: 'detik', plural: 'detik' }
-      },
-    });
-  </script>
+      function submitForm() {
+        Swal.fire({
+          title: "Loading...",
+          didOpen: () => {
+            Swal.showLoading();
+          },
+        });
+      }
+    </script>
 
-  <script>
-    const stickyTop = document.querySelector('.sticky-top');
-    const offcanvas = document.querySelector('.offcanvas');
+    <script>
+      simplyCountdown(".simply-countdown", {
+        year: 2024, // required
+        month: 3, // required
+        day: 7, // required
+        hours: 17, // Default is 0 [0-23] integer
+        words: {
+          //words displayed into the countdown
+          days: { singular: "hari", plural: "hari" },
+          hours: { singular: "jam", plural: "jam" },
+          minutes: { singular: "menit", plural: "menit" },
+          // seconds: { singular: 'detik', plural: 'detik' }
+        },
+      });
+    </script>
 
-    offcanvas.addEventListener('show.bs.offcanvas', function () {
-      stickyTop.style.overflow = 'visible';
-    });
+    <script>
+      const stickyTop = document.querySelector(".sticky-top");
+      const offcanvas = document.querySelector(".offcanvas");
 
-    offcanvas.addEventListener('hidden.bs.offcanvas', function () {
-      stickyTop.style.overflow = 'hidden';
-    });
+      offcanvas.addEventListener("show.bs.offcanvas", function () {
+        stickyTop.style.overflow = "visible";
+      });
 
-  </script>
+      offcanvas.addEventListener("hidden.bs.offcanvas", function () {
+        stickyTop.style.overflow = "hidden";
+      });
+    </script>
 
-  <script>
-    const rootElement = document.querySelector(":root");
-    const audioIconWrapper = document.querySelector('.audio-icon-wrapper');
-    const audioIcon = document.querySelector('.audio-icon-wrapper i');
-    const song = document.querySelector('#song');
-    let isPlaying = false;
+    <script>
+      const rootElement = document.querySelector(":root");
+      const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
+      const audioIcon = document.querySelector(".audio-icon-wrapper i");
+      const song = document.querySelector("#song");
+      let isPlaying = false;
 
-    function disableScroll() {
-      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+      function disableScroll() {
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
 
-      window.onscroll = function () {
-        window.scrollTo(scrollTop, scrollLeft);
+        window.onscroll = function () {
+          window.scrollTo(scrollTop, scrollLeft);
+        };
+
+        rootElement.style.scrollBehavior = "auto";
       }
 
-      rootElement.style.scrollBehavior = 'auto';
-    }
+      function enableScroll() {
+        window.onscroll = function () {};
+        rootElement.style.scrollBehavior = "smooth";
+        // localStorage.setItem('opened', 'true');
+        playAudio();
+      }
 
-    function enableScroll() {
-      window.onscroll = function () { }
-      rootElement.style.scrollBehavior = 'smooth';
-      // localStorage.setItem('opened', 'true');
-      playAudio();
-    }
-
-    function playAudio() {
-      song.volume = 0.1;
-      audioIconWrapper.style.display = 'flex';
-      song.play();
-      isPlaying = true;
-    }
-
-    audioIconWrapper.onclick = function () {
-      if (isPlaying) {
-        song.pause();
-        audioIcon.classList.remove('bi-disc');
-        audioIcon.classList.add('bi-pause-circle');
-      } else {
+      function playAudio() {
+        song.volume = 0.1;
+        audioIconWrapper.style.display = "flex";
         song.play();
-        audioIcon.classList.add('bi-disc');
-        audioIcon.classList.remove('bi-pause-circle');
+        isPlaying = true;
       }
 
-      isPlaying = !isPlaying;
-    }
+      audioIconWrapper.onclick = function () {
+        if (isPlaying) {
+          song.pause();
+          audioIcon.classList.remove("bi-disc");
+          audioIcon.classList.add("bi-pause-circle");
+        } else {
+          song.play();
+          audioIcon.classList.add("bi-disc");
+          audioIcon.classList.remove("bi-pause-circle");
+        }
 
-    // if (!localStorage.getItem('opened')) {
-    //   disableScroll();
-    // }
-    disableScroll();
-  </script>
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const nama = urlParams.get('n') || '';
-    const pronoun = urlParams.get('p') || 'Akbar Anung';
-    const namaContainer = document.querySelector('.hero h4 span');
-    namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
+        isPlaying = !isPlaying;
+      };
 
-    document.querySelector('#nama').value = nama;
-  </script>
-</body>
+      // if (!localStorage.getItem('opened')) {
+      //   disableScroll();
+      // }
+      disableScroll();
+    </script>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const nama = urlParams.get("n") || "";
+      const pronoun = urlParams.get("p") || "Akbar Anung";
+      const namaContainer = document.querySelector(".hero h4 span");
+      namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ",");
 
+      document.querySelector("#nama").value = nama;
+    </script>
+  </body>
 </html>
